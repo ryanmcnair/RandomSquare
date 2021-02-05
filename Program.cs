@@ -28,14 +28,11 @@ namespace RandomSquare
                 Console.WriteLine($"Squared numbers: {squaredNumber}");
             }
 
+            squaredNumberList.RemoveAll(number => number % 2 != 0);
             
             foreach (var number in squaredNumberList)
             {
-                if (number % 2 != 0)
-                {
-                    squaredNumberList.Remove(number);
-                    Console.WriteLine($"{number}");
-                }
+                Console.WriteLine($"Removed odd numbers: { number}");
                 
             }
             
